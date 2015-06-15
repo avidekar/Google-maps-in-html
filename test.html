@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CONTACT US</title>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(37.355137,-121.944111);
+
+function intialize() {
+	var mapView = {
+		center:myCenter,
+		zoom : 8,
+		mapTypeId:google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("googleMap"),mapView);
+	var marker = new google.maps.Marker({
+		position:myCenter,
+	});
+	marker.setMap(map);
+
+}
+google.maps.event.addDomListener(window, 'load', intialize);
+</script>
+<script type="text/css">
+form {
+
+}	
+
+</script>
+</head>
+<body>
+<header><h1></h1></header>
+<div id="content"> 
+	<div style="position:relative;height:1000px">
+		<p>Contact Us</p>
+		<div id="googleMap"style="margin-left:2%;margin-right:2%;height:50%;border:2px solid #2E2EB8">
+		<p>GOOGLE MAP!</p>
+		</div>
+		<div style="margin-top:1%"></div>
+		<div style="margin-left:10%;margin-right:1%;height:16%;width:34%;float:left;border-radius:25px;border:2px solid #2E2EB8;background-color:lightgray">
+			<p align="center"><br><br><br>EMAIL US</p></div>
+		<div style="margin-left:1%;height:16%;width:34%;float:left;;border-radius:25px;border:2px solid #2E2EB8;background-color:lightgray">
+			<p align="center"><br><br><br>CONTACT US</p></div>	
+		<div style="margin-top:1%;margin-left:1%;height:40%;	float:left">
+		<form style="margin-top:1%;margin-left:30%">
+		<br>	
+		<input type="text" placeholder="Your Name (required)" style="margin-left:1%;width:650px;height:28px;background-color:lightgray;border:2px solid #2E2EB8"><br><br>
+		<input type="email" type="email" placeholder="Your email-id (required)" style="margin-left:1%;width:650px;height:28px;background-color:lightgray;border:2px solid #2E2EB8"><br><br>
+		<input type="text" placeholder="Subject (required)" style="margin-left:1%;width:650px;height:28px;background-color:lightgray;border:2px solid #2E2EB8"><br><br>
+		<textarea rows="10" cols="90" style="margin-left:1%;background-color:lightgray;border:2px solid #2E2EB8" placeholder="Your message (required)"></textarea>
+		<br>
+		<input type="SUBMIT" name="SUBMIT" style="align:center;margin-left:1%;height:30px;width:80px;background-color:orange">	 
+		</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
